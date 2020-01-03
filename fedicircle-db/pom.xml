@@ -9,7 +9,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>fedicircle-model</artifactId>
+    <artifactId>fedicircle-db</artifactId>
 
     <dependencies>
         <dependency>

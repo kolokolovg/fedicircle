@@ -16,7 +16,7 @@
     </parent>
 
     <modules>
-        <module>fedicircle-model</module>
+        <module>fedicircle-db</module>
     </modules>
 
     <properties>
