@@ -1,4 +1,5 @@
 /fedicircle.iml
 /.idea/
-/fedicircle-db/target/
-/fedicircle-core/target/
+/*/target/
+/target/
+*.iml

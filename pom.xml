@@ -18,6 +18,7 @@
     <modules>
         <module>fedicircle-db</module>
         <module>fedicircle-core</module>
+        <module>fedicircle-mastaweb</module>
     </modules>
 
     <properties>
