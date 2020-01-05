@@ -1,6 +1,8 @@
 package org.guyvernk.db.service;
 
 import org.guyvernk.db.RepoTest;
+import org.guyvernk.db.entity.Role;
+import org.guyvernk.db.entity.RolesEnum;
 import org.guyvernk.db.repo.RoleRepository;
 import org.guyvernk.db.repo.UserRepository;
 import org.junit.jupiter.api.AfterEach;
@@ -9,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -33,9 +37,13 @@ class ReactiveUserServiceTest extends RepoTest {
 
     @Test
     void findByUsername() {
-        reactiveUserService.findByUsername("1")
+        reactiveUserService.findByUsername("3")
                 .doOnNext(user -> {
-                    assertEquals("1", user.getUsername());
+                    assertEquals("3", user.getUsername());
+                    Set<Role> roles = user.getRoles();
+                    roles.stream()
+                            .map(Role::getName)
+                            .forEach(rolesEnum -> assertEquals(RolesEnum.ROLE_USER,rolesEnum));
                 })
                 .subscribe();
     }
