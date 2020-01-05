@@ -1,4 +1,4 @@
-package org.guyvernk.db.security.model;
+package org.guyvernk.db.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

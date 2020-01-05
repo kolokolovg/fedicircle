@@ -6,4 +6,56 @@
 
 
 
+    <changeSet author="Kolokolov Gleb" id="inserttestusersroles" >
+        <insert tableName="roles">
+            <column name="id" valueSequenceNext="roles_id_seq"/>
+            <column name="name">ROLE_USER</column>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" valueSequenceNext="roles_id_seq"/>
+            <column name="name">ROLE_MODERATOR</column>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" valueSequenceNext="roles_id_seq"/>
+            <column name="name">ROLE_ADMIN</column>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueSequenceNext="users_id_seq"/>
+            <column name="username">Ivan Govnov</column>
+            <column name="email">pes@mail.ru</column>
+            <column name="password">test</column>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueSequenceNext="users_id_seq"/>
+            <column name="username">Petr Govnov</column>
+            <column name="email">pes2@mail.ru</column>
+            <column name="password">test</column>
+        </insert>
+        <insert tableName="users">
+            <column name="id" valueSequenceNext="users_id_seq"/>
+            <column name="username">1</column>
+            <column name="email">pes2@mail.ru</column>
+            <column name="password">$2a$10$SKIAYV1lIC9dZk.y2XHPoeeKZT2n15vwZS5Tj4khCCSBV7O8LIRqG</column>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="id" valueSequenceNext="user_roles_id_seq"/>
+            <column name="user_id">1</column>
+            <column name="role_id">1</column>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="id" valueSequenceNext="user_roles_id_seq"/>
+            <column name="user_id">2</column>
+            <column name="role_id">2</column>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="id" valueSequenceNext="user_roles_id_seq"/>
+            <column name="user_id">2</column>
+            <column name="role_id">3</column>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="id" valueSequenceNext="user_roles_id_seq"/>
+            <column name="user_id">3</column>
+            <column name="role_id">1</column>
+        </insert>
+    </changeSet>
 </databaseChangeLog>

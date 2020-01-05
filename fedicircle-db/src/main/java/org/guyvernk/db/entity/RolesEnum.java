@@ -1,4 +1,4 @@
-package org.guyvernk.db.security.model;
+package org.guyvernk.db.entity;
 
 public enum RolesEnum {
     ROLE_USER,
