@@ -11,9 +11,14 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 
 public class JsonLDSerializer<T> extends StdSerializer<T> {
+    private static final long serialVersionUID = -8855810085276319792L;
 
-    protected JsonLDSerializer(){ this(null); }
-    protected JsonLDSerializer(Class<T> t){ super(t); }
+    protected JsonLDSerializer(){
+        this(null);
+    }
+    protected JsonLDSerializer(Class<T> t){
+        super(t);
+    }
 
     @Override
     public void serialize(Object o, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
