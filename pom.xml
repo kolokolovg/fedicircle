@@ -27,7 +27,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${jdk.version}</maven.compiler.source>
         <maven.compiler.target>${jdk.version}</maven.compiler.target>
-        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <spring.boot.version>2.2.1.RELEASE</spring.boot.version>
         <junit.platform.version>1.3.2</junit.platform.version>
         <spring-test-dbunit.version>1.3.0</spring-test-dbunit.version>
         <dbunit.version>2.6.0</dbunit.version>
