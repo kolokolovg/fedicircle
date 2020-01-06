@@ -1,6 +1,7 @@
 package org.guyvernk.db.repo;
 
 import org.guyvernk.db.RepoTest;
+import org.guyvernk.db.entity.User;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +17,9 @@ class UserRepositoryTest extends RepoTest {
 
     @Test
     void findByUsername() {
-        assertEquals("1", userRepository.findByUsername("1").get().getUsername());
-        assertEquals("2", userRepository.findByUsername("2").get().getUsername());
-        assertEquals("3", userRepository.findByUsername("3").get().getUsername());
+        assertEquals("1", userRepository.findByUsername("1").map(User::getUsername).orElse(""));
+        assertEquals("2", userRepository.findByUsername("2").map(User::getUsername).orElse(""));
+        assertEquals("3", userRepository.findByUsername("3").map(User::getUsername).orElse(""));
     }
 
     @Test

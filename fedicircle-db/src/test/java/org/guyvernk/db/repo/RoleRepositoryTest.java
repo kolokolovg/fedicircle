@@ -1,6 +1,7 @@
 package org.guyvernk.db.repo;
 
 import org.guyvernk.db.RepoTest;
+import org.guyvernk.db.entity.Role;
 import org.guyvernk.db.entity.RolesEnum;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +17,11 @@ class RoleRepositoryTest extends RepoTest {
 
     @Test
     void findByName() {
-        assertEquals(RolesEnum.ROLE_USER, roleRepository.findByName(RolesEnum.ROLE_USER).get().getName());
-        assertEquals(RolesEnum.ROLE_MODERATOR, roleRepository.findByName(RolesEnum.ROLE_MODERATOR).get().getName());
-        assertEquals(RolesEnum.ROLE_ADMIN, roleRepository.findByName(RolesEnum.ROLE_ADMIN).get().getName());
+        assertEquals(RolesEnum.ROLE_USER,
+                roleRepository.findByName(RolesEnum.ROLE_USER).map(Role::getName).orElse(RolesEnum.NONE));
+        assertEquals(RolesEnum.ROLE_MODERATOR,
+                roleRepository.findByName(RolesEnum.ROLE_MODERATOR).map(Role::getName).orElse(RolesEnum.NONE));
+        assertEquals(RolesEnum.ROLE_ADMIN,
+                roleRepository.findByName(RolesEnum.ROLE_ADMIN).map(Role::getName).orElse(RolesEnum.NONE));
     }
 }
