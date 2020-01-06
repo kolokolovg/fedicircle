@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @RunWith(SpringRunner.class)
-class ReactiveUserServiceTest extends RepoTest {
+class UserServiceTest extends RepoTest {
     @Autowired
     private UserService userService;
 
