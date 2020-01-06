@@ -23,7 +23,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
         prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    public UserDetailServiceImpl userDetailService;
+    private UserDetailServiceImpl userDetailService;
 
     @Override
     public void configure(AuthenticationManagerBuilder authenticationManagerBuilder)
